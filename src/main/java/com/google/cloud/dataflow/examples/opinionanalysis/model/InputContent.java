@@ -163,7 +163,7 @@ public class InputContent {
 	
 	private void calculateHashFields()
 	{
-		this.expectedDocumentHash = Document.calculateDocumentHash(this.text,this.documentCollectionId,this.collectionItemId);
+		this.expectedDocumentHash = Document.calculateDocumentHash(this.text);
 		this.expectedWebResourceHash = ((this.pubTime != null) && (this.url !=null)) ? HashUtils.getSHA1HashBase64(this.pubTime + this.url) : null;
 		this.expectedParentWebResourceHash = ((this.parentUrl != null && this.parentPubTime != null)) ? HashUtils.getSHA1HashBase64(this.parentPubTime + this.parentUrl) : null;
 	}

@@ -35,3 +35,7 @@ hs_err_pid*.log
 
 #Ignore ._ files, as they were added by a text editor
 ._*
+
+# IntelliJ Files
+.idea/
+.idea/*
