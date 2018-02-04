@@ -28,7 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class CronEventHandler(webapp2.RequestHandler):
     def get(self):
-        topic_name = 'kga-indexercommands'
+        topic_name = 'indexercommands'
         msg='command=start_social_import\ntimewindowsec=130000\nhistorywindowsec=604800'
         publish_to_topic(topic_name, msg)
         self.response.status = 204

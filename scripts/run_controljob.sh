@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Copyright 2017 Google Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PROJECT_ID="replace_with_project_id"
+PROJECT_ID="vina-emotion"
 DATASET_ID="opinions"
-GCS_BUCKET="replace_with_bucket"
+GCS_BUCKET="staging.vina-emotion.appspot.com"
 INDEXER_CONTROL_TOPIC="indexercommands"
 INDEXER_DOCUMENT_TOPIC="documents"
 
@@ -23,7 +24,7 @@ JDBC_SOURCE_USERNAME="replace"
 JDBC_SOURCE_PASSWORD="replace"
 
 
-mvn compile exec:java \
+mvn -X compile exec:java \
   -Dexec.mainClass=com.google.cloud.dataflow.examples.opinionanalysis.ControlPipeline\
   -Dexec.args="--project=$PROJECT_ID \
     --stagingLocation=gs://$GCS_BUCKET/staging/ \

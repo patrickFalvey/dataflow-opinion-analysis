@@ -14,15 +14,15 @@
 cron:
 - description: Daily import of documents from the news collection database into BigQuery
   url: /events/startjdbcimport
-  schedule: every day 05:00 
+  schedule: every day 23:18
   timezone: America/Los_Angeles
 
 - description: Daily import of social stats from the news collection database into BigQuery
   url: /events/startsocialimport
-  schedule: every day 06:00 
+  schedule: every day 23:20
   timezone: America/Los_Angeles
   
 - description: Daily calculation of topic stats in BigQuery
   url: /events/startstatscalc
-  schedule: every day 06:30 
+  schedule: every day 23:22
   timezone: America/Los_Angeles  
